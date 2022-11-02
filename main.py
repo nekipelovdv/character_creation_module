@@ -3,7 +3,6 @@ from random import randint
 from graphic_arts.start_game_banner import run_screensaver
 
 
-
 def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный '
@@ -67,8 +66,9 @@ def choice_char_class() -> str:
     char_class: str = None
     while approve_choice != 'y':
         char_class: str = input('Введи название персонажа, '
-                           'за которого хочешь играть:'
-                           'Воитель — warrior, Маг — mage, Лекарь — healer: ')
+                                'за которого хочешь играть:'
+                                'Воитель — warrior, Маг — mage, '
+                                'Лекарь — healer: ')
         if char_class == 'warrior':
             print('Воитель — дерзкий воин ближнего боя. '
                   'Сильный, выносливый и отважный.')
@@ -96,4 +96,3 @@ if __name__ == '__main__':
     print('Воитель, Маг, Лекарь')
     char_class: str = choice_char_class()
     print(start_training(char_name, char_class))
-
